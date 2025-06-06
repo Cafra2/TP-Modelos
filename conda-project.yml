@@ -1,6 +1,0 @@
-name: TP-Modelos
-environments:
-  default:
-    - environment.yml
-variables: {}
-commands: {}
