@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[spanish]{babel} % Para reglas de español
+\usepackage{enumitem} % Para personalizar listas
+
+\title{{TP-Modelos}}
+\author{Gabriel Guimpelevich\and Agustín Farace}
+\date{Junio 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Este es un trabajo práctico en el que se busca estudiar la efectividad de varios métodos de generación de números pseudoaleatorios al compararlos con análisis estadístico y aplicarlos a un problema concreto de simulación.
+\\\\
+    \subsection{Generadores usados}
+    Los generadores elegidos son:
+    \begin{itemize}
+        \item Generador Congruencial Lineal (LCG) con parámetros:
+        \begin{itemize}[label=$\ast$]
+            \item $a=16807$ 
+            \item $c=0$ 
+            \item $m=2^{31}-1$
+        \end{itemize}
+    
+        \item XORShift
+        \item Mersenne Twister MT19937
+    \end{itemize}
+    
+\pagebreak
+    \subsection{Problema a simular}
+    Se desea estimar, mediante el método de Monte Carlo, el valor de la siguiente integral múltiple:
+    \[
+    \int_{[0,1]^5} \left( \sum_{i=1}^5 x_i \right)^2 \, dx_1...dx_5
+    \]
+    Esta integral representa el valor esperado de la suma al cuadrado de cinco variables independientes uniformemente distribuidas en [0,1].\\
+    Para referencia, el valor teórico de la integral es $\approx \frac{20}{3}$.
+\end{document}
